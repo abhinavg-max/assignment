@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My To-Do App</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        input, textarea {
+            display: block;
+            margin-top: 5px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My To-Do List</h1>
+
+    <form id="todoForm">
+
+        <label>Item Name:</label>
+        <input type="text" id="itemName" required>
+
+        <br>
+
+        <label>Item Description:</label>
+        <textarea id="itemDescription" required></textarea>
+
+        <br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <script>
+        document.getElementById("todoForm").addEventListener("submit", function(event) {
+
+            event.preventDefault();
+
+            let itemName = document.getElementById("itemName").value;
+            let itemDescription = document.getElementById("itemDescription").value;
+
+            console.log(itemName);
+            console.log(itemDescription);
+
+            window.location.href = "success.html";
+
+        });
+    </script>
+
+</body>
+</html>
